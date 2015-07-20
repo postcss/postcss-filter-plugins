@@ -29,19 +29,19 @@ var counter = postcss.plugin('counter', function () {
 
 var css = 'h1 { foo: 1 }';
 var out = postcss([
-  filter(),
-  counter(),
-  counter()
+    filter(),
+    counter(),
+    counter()
 ]).process(css).css;
 
 console.log(out);
 // => h1 { foo: 2 }
-// note that you will get a PostCSS warning in the message registry
+// Note that you will get a PostCSS warning in the message registry
 ```
 
 ## API
 
-### filterPlugins({options})
+### filterPlugins([options])
 
 #### options
 
