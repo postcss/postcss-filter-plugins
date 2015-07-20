@@ -6,8 +6,8 @@
 
 With [npm](https://npmjs.org/package/postcss-filter-plugins) do:
 
-```
-npm install postcss-filter-plugins --save
+```console
+$ npm install postcss-filter-plugins --save
 ```
 
 ## Example
@@ -28,10 +28,15 @@ var counter = postcss.plugin('counter', function () {
 });
 
 var css = 'h1 { foo: 1 }';
-var out = postcss([ filter(), counter(), counter() ]).process(css).css;
+var out = postcss([
+    filter(),
+    counter(),
+    counter()
+]).process(css).css;
 
 console.log(out);
 // => h1 { foo: 2 }
+// Note that you will get a PostCSS warning in the message registry
 ```
 
 ## API
@@ -43,9 +48,9 @@ console.log(out);
 ##### direction
 
 Type: `string`
-Default: `both`
+Default: `'both'`
 
-Pass `forward`, `backward`, or `both` to customise the direction in which the
+Pass `'forward'`, `'backward'`, or `'both'` to customise the direction in which the
 plugin will look in the plugins array. See the [tests] for examples on how this
 works.
 
@@ -64,7 +69,7 @@ Plugins that should be excluded from the filter. Pass an array of plugin names.
 
 ```js
 postcss([ filter({
-    exclude: ['autoprefixer']
+    exclude: ['postcss-cssstats']
 }) ]).process(css).css);
 ```
 
