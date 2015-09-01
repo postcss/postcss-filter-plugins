@@ -33,6 +33,10 @@ export default postcss.plugin('postcss-filter-plugins', ({
 
         let detect = (list, plugin) => {
             let name = plugin.postcssPlugin;
+            if (typeof name === 'undefined') {
+                position++;
+                return;
+            }
             if (~list.indexOf(name)) {
                 if (!silent) {
                     result.warn(template(plugin));

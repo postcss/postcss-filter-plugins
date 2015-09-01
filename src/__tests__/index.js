@@ -30,6 +30,25 @@ test('readme example code', t => {
     t.equal(out, 'h1 { foo: 2 }');
 });
 
+test('should handle processors without the postcssPlugin property', t => {
+    var foo = function () {
+        return function (css) {
+            css.eachDecl('foo', function (foo) {
+                foo.removeSelf();
+            });
+        };
+    };
+
+    t.plan(2);
+
+    var css = 'h1 { foo: bar; font-weight: normal }';
+
+    postcss([ foo(), fontWeight(), filter(), foo(), fontWeight() ]).process(css).then(function (result) {
+        t.equal(result.css, 'h1 { font-weight: 400 }');
+        t.equal(result.processor.plugins.length, 4);
+    });
+});
+
 test('should warn if plugin exists', t => {
     t.plan(2);
     let plugins = [ fontWeight(), filter(), fontWeight() ];
