@@ -19,11 +19,11 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "babel": "^5.6.2",
-    "babel-tape-runner": "^1.1.0",
+    "babel": "^5.8.23",
+    "babel-tape-runner": "^1.2.0",
     "postcss-minify-font-weight": "^1.0.1",
     "tap-spec": "^4.1.0",
-    "tape": "^4.0.0"
+    "tape": "^4.2.0"
   },
   "homepage": "https://github.com/postcss/postcss-filter-plugins",
   "author": {
@@ -33,7 +33,7 @@
   },
   "repository": "postcss/postcss-filter-plugins",
   "dependencies": {
-    "postcss": "^4.1.11",
+    "postcss": "^5.0.4",
     "uniqid": "^1.0.0"
   }
 }

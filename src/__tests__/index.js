@@ -15,7 +15,7 @@ function getCss (filters, cb) {
 test('readme example code', t => {
     var counter = postcss.plugin('counter', function () {
         return function (css) {
-            css.eachDecl('foo', function (decl) {
+            css.walkDecls('foo', function (decl) {
                 let value = parseInt(decl.value, 10);
                 value += 1;
                 decl.value = String(value);
@@ -33,8 +33,8 @@ test('readme example code', t => {
 test('should handle processors without the postcssPlugin property', t => {
     var foo = function () {
         return function (css) {
-            css.eachDecl('foo', function (foo) {
-                foo.removeSelf();
+            css.walkDecls('foo', function (foo) {
+                foo.remove();
             });
         };
     };
