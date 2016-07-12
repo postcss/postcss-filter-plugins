@@ -1,5 +1,3 @@
-'use strict';
-
 import postcss from 'postcss';
 import uniqid from 'uniqid';
 
@@ -7,24 +5,24 @@ export default postcss.plugin('postcss-filter-plugins', ({
     template = ({postcssPlugin}) => `Found duplicate plugin: ${postcssPlugin}`,
     silent = false,
     exclude = [],
-    direction = 'both'
+    direction = 'both',
 } = {}) => {
-    let id = uniqid();
+    const id = uniqid();
     let prev, next, both;
 
     switch (direction) {
-        case 'both':
-            both = true;
-            break;
-        case 'backward':
-            prev = true;
-            break;
-        case 'forward':
-            next = true;
-            break;
+    case 'both':
+        both = true;
+        break;
+    case 'backward':
+        prev = true;
+        break;
+    case 'forward':
+        next = true;
+        break;
     }
 
-    let plugin = (css, result) => {
+    const processor = (css, result) => {
         let previousPlugins = [];
         let nextPlugins = [];
         let bothPlugins = [];
@@ -49,7 +47,7 @@ export default postcss.plugin('postcss-filter-plugins', ({
         };
 
         while (position < result.processor.plugins.length) {
-            let plugin = result.processor.plugins[position];
+            const plugin = result.processor.plugins[position];
             if (~exclude.indexOf(plugin.postcssPlugin)) {
                 position ++;
                 continue;
@@ -78,7 +76,7 @@ export default postcss.plugin('postcss-filter-plugins', ({
         }
     };
 
-    plugin._id = id;
+    processor._id = id;
 
-    return plugin;
+    return processor;
 });

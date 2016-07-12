@@ -1,0 +1,41 @@
+{
+  "projectName": "postcss-filter-plugins",
+  "projectOwner": "postcss",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "ben-eb",
+      "name": "Ben Briggs",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1282980?v=3",
+      "profile": "http://beneb.info",
+      "contributions": [
+        "code",
+        "doc",
+        "review",
+        "test"
+      ]
+    },
+    {
+      "login": "MoOx",
+      "name": "Maxime Thirouin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/157534?v=3",
+      "profile": "https://moox.io/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "papandreou",
+      "name": "Andreas Lind",
+      "avatar_url": "https://avatars.githubusercontent.com/u/373545?v=3",
+      "profile": "https://github.com/papandreou",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
+}
