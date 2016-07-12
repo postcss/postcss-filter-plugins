@@ -34,6 +34,6 @@
   "repository": "postcss/postcss-filter-plugins",
   "dependencies": {
     "postcss": "^5.0.4",
-    "uniqid": "^1.0.0"
+    "uniqid": "^3.0.0"
   }
 }
