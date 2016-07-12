@@ -50,7 +50,7 @@ test('should warn if plugin exists', t => {
     ];
     const warnings = getWarnings(plugins);
     t.is(warnings.length, 1);
-    t.is(warnings[0].text, 'Found duplicate plugin: postcss-minify-font-weight');
+    t.is(warnings[0].text, 'Found duplicate plugin: fontWeight');
 });
 
 test('should warn if plugin exists, with a custom message', t => {
@@ -62,7 +62,7 @@ test('should warn if plugin exists, with a custom message', t => {
     ];
     const warnings = getWarnings(plugins);
     t.is(warnings.length, 1);
-    t.is(warnings[0].text, 'Uh-oh: postcss-minify-font-weight');
+    t.is(warnings[0].text, 'Uh-oh: fontWeight');
 });
 
 test('should not warn when silent', t => {
@@ -77,7 +77,7 @@ test('should not warn when silent', t => {
 test('should not warn if the plugin is excluded from the filter', t => {
     const plugins = [
         fontWeight(),
-        filter({exclude: ['postcss-minify-font-weight']}),
+        filter({exclude: ['fontWeight']}),
         fontWeight(),
     ];
     t.is(getWarnings(plugins).length, 0);
