@@ -23,14 +23,14 @@ export default postcss.plugin('postcss-filter-plugins', ({
     }
 
     const processor = (css, result) => {
-        let previousPlugins = [];
-        let nextPlugins = [];
-        let bothPlugins = [];
+        const previousPlugins = [];
+        const nextPlugins = [];
+        const bothPlugins = [];
         let filter = false;
         let position = 0;
 
-        let detect = (list, plugin) => {
-            let name = plugin.postcssPlugin;
+        const detect = (list, plugin) => {
+            const name = plugin.postcssPlugin;
             if (typeof name === 'undefined') {
                 position++;
                 return;
