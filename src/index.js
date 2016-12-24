@@ -1,5 +1,5 @@
 import postcss from 'postcss';
-import uniqid from 'uniqid';
+import uuid from 'node-uuid';
 
 export default postcss.plugin('postcss-filter-plugins', ({
     template = ({postcssPlugin}) => `Found duplicate plugin: ${postcssPlugin}`,
@@ -7,7 +7,7 @@ export default postcss.plugin('postcss-filter-plugins', ({
     exclude = [],
     direction = 'both',
 } = {}) => {
-    const id = uniqid();
+    const id = uuid.v1();
     let prev, next, both;
 
     switch (direction) {
