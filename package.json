@@ -45,8 +45,8 @@
   },
   "repository": "postcss/postcss-filter-plugins",
   "dependencies": {
-    "postcss": "^5.0.4",
-    "uniqid": "^4.0.0"
+    "node-uuid": "^1.4.7",
+    "postcss": "^5.0.4"
   },
   "ava": {
     "require": "babel-register"
