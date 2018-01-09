@@ -8,8 +8,7 @@
     "contributorGenerate": "all-contributors generate",
     "pretest": "eslint src",
     "prepublish": "del-cli dist && BABEL_ENV=publish babel src --out-dir dist --ignore /__tests__/",
-    "test": "ava src/__tests__/",
-    "test-012": "ava src/__tests__/"
+    "test": "ava src/__tests__/"
   },
   "files": [
     "LICENSE-MIT",
@@ -45,7 +44,7 @@
   },
   "repository": "postcss/postcss-filter-plugins",
   "dependencies": {
-    "postcss": "^5.0.4",
+    "postcss": "^6.0.14",
     "uniqid": "^4.0.0"
   },
   "ava": {
