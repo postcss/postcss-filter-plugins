@@ -1,3 +1,7 @@
+# 3.0.0
+
+* Upgraded to PostCSS 6
+
 # 2.0.2
 
 * Bumped uniqid to `4.0.0`.
