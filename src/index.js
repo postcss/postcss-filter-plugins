@@ -1,5 +1,6 @@
 import postcss from 'postcss';
-import uniqid from 'uniqid';
+
+function guid(a){return a?(a^Math.random()*16>>a/4).toString(16):([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,guid)}
 
 export default postcss.plugin('postcss-filter-plugins', ({
     template = ({postcssPlugin}) => `Found duplicate plugin: ${postcssPlugin}`,
@@ -7,7 +8,7 @@ export default postcss.plugin('postcss-filter-plugins', ({
     exclude = [],
     direction = 'both',
 } = {}) => {
-    const id = uniqid();
+    const id = guid();
     let prev, next, both;
 
     switch (direction) {
