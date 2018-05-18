@@ -1,3 +1,7 @@
+# 3.0.1
+
+* Remove vulnerable downstream dependency
+
 # 3.0.0
 
 * Upgraded to PostCSS 6

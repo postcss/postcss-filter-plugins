@@ -1,6 +1,6 @@
 {
   "name": "postcss-filter-plugins",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Exclude/warn on duplicated PostCSS plugins.",
   "main": "dist/index.js",
   "scripts": {
