@@ -1,5 +1,4 @@
 import postcss from 'postcss';
-import uniqid from 'uniqid';
 
 export default postcss.plugin('postcss-filter-plugins', ({
     template = ({postcssPlugin}) => `Found duplicate plugin: ${postcssPlugin}`,
@@ -7,7 +6,7 @@ export default postcss.plugin('postcss-filter-plugins', ({
     exclude = [],
     direction = 'both',
 } = {}) => {
-    const id = uniqid();
+    const id = Math.random().toString();
     let prev, next, both;
 
     switch (direction) {
