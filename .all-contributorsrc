@@ -45,6 +45,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "JamesCodes",
+      "name": "James Hunt",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1133591?v=4",
+      "profile": "http://jamescodes.co.uk",
+      "contributions": [
+        "code"
+      ]
     }
-  ]
+  ],
+  "repoType": "github"
 }
