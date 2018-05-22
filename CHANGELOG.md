@@ -6,6 +6,12 @@
 
 * Upgraded to PostCSS 6
 
+# 2.0.3
+
+_This is a backport release of v3.0.1_
+
+* Remove vulnerable downstream dependency
+
 # 2.0.2
 
 * Bumped uniqid to `4.0.0`.
