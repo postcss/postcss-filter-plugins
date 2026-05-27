@@ -1,4 +1,8 @@
-# [postcss][postcss]-filter-plugins [![Build Status](https://travis-ci.org/postcss/postcss-filter-plugins.svg?branch=master)][ci]
+# postcss-filter-plugins
+
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/postcss/postcss-filter-plugins) ![npm downloads](https://img.shields.io/npm/dm/postcss-filter-plugins)](https://www.npmjs.com/package/postcss-filter-plugins)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/postcss/postcss-filter-plugins/test.yml)](https://github.com/postcss/postcss-filter-plugins/actions)
+[![License](https://img.shields.io/github/license/postcss/postcss-filter-plugins)](https://github.com/postcss/postcss-filter-plugins)
 
 > Exclude/warn on duplicated PostCSS plugins.
 
