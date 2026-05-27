@@ -125,6 +125,12 @@ Contributions of any kind welcome!
 
 MIT © [Ben Briggs](http://beneb.info)
 
+## Security contact information
+
+To report a security vulnerability, please use the
+[Tidelift security contact](https://tidelift.com/security).
+Tidelift will coordinate the fix and disclosure.
+
 [ci]:      https://travis-ci.org/postcss/postcss-filter-plugins
 [cssnano]: http://cssnano.co
 [cssnext]: http://cssnext.io
