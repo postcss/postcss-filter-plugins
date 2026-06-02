@@ -8,35 +8,29 @@
 
 ## Install
 
-With [npm](https://npmjs.org/package/postcss-filter-plugins) do:
-
 ```console
-$ npm install postcss-filter-plugins --save
+npm install postcss-filter-plugins
 ```
 
 ## Example
 
 Note that this plugin does not actually transform your CSS; instead, it ensures
 that plugins in the PostCSS instance are not duplicated. It is intended to be
-used by plugin packs such as [cssnano] or [cssnext].
+used by plugin packs such as [cssnano](http://cssnano.co).
 
 ```js
-var counter = postcss.plugin('counter', function () {
-    return function (css) {
-        css.eachDecl('foo', function (decl) {
-            let value = parseInt(decl.value, 10);
-            value += 1;
-            decl.value = String(value);
-        });
-    }
+var counter = postcss.plugin("counter", function () {
+  return function (css) {
+    css.eachDecl("foo", function (decl) {
+      let value = parseInt(decl.value, 10);
+      value += 1;
+      decl.value = String(value);
+    });
+  };
 });
 
-var css = 'h1 { foo: 1 }';
-var out = postcss([
-    filter(),
-    counter(),
-    counter()
-]).process(css).css;
+var css = "h1 { foo: 1 }";
+var out = postcss([filter(), counter(), counter()]).process(css).css;
 
 console.log(out);
 // => h1 { foo: 2 }
@@ -55,7 +49,7 @@ Type: `string`
 Default: `'both'`
 
 Pass `'forward'`, `'backward'`, or `'both'` to customise the direction in which the
-plugin will look in the plugins array. See the [tests] for examples on how this
+plugin will look in the plugins array. See the tests for examples on how this
 works.
 
 ```js
@@ -114,24 +108,6 @@ examples for your environment.
 
 ## Contributors
 
-Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+Thanks goes to [these wonderful people](https://github.com/postcss/postcss-filter-plugins/graphs/contributors)
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
-| [<img src="https://avatars.githubusercontent.com/u/1282980?v=3" width="100px;"/><br /><sub><b>Ben Briggs</b></sub>](http://beneb.info)<br />[💻](https://github.com/postcss/postcss-filter-plugins/commits?author=ben-eb "Code") [📖](https://github.com/postcss/postcss-filter-plugins/commits?author=ben-eb "Documentation") [👀](#review-ben-eb "Reviewed Pull Requests") [⚠️](https://github.com/postcss/postcss-filter-plugins/commits?author=ben-eb "Tests") | [<img src="https://avatars.githubusercontent.com/u/157534?v=3" width="100px;"/><br /><sub><b>Maxime Thirouin</b></sub>](https://moox.io/)<br />[📖](https://github.com/postcss/postcss-filter-plugins/commits?author=MoOx "Documentation") | [<img src="https://avatars.githubusercontent.com/u/373545?v=3" width="100px;"/><br /><sub><b>Andreas Lind</b></sub>](https://github.com/papandreou)<br />[💻](https://github.com/postcss/postcss-filter-plugins/commits?author=papandreou "Code") | [<img src="https://avatars3.githubusercontent.com/u/17342435?v=4" width="100px;"/><br /><sub><b>Ryan Zimmerman</b></sub>](http://www.ryanzim.com)<br />[💻](https://github.com/postcss/postcss-filter-plugins/commits?author=RyanZim "Code") | [<img src="https://avatars0.githubusercontent.com/u/1133591?v=4" width="100px;"/><br /><sub><b>James Hunt</b></sub>](http://jamescodes.co.uk)<br />[💻](https://github.com/postcss/postcss-filter-plugins/commits?author=JamesCodes "Code") |
-| :---: | :---: | :---: | :---: | :---: |
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification.
-Contributions of any kind welcome!
-
-
-## License
-
-MIT © [Ben Briggs](http://beneb.info)
-
-[ci]:      https://travis-ci.org/postcss/postcss-filter-plugins
-[cssnano]: http://cssnano.co
-[cssnext]: http://cssnext.io
-[postcss]: https://github.com/postcss/postcss
-[tests]:   src/__tests__
+## [License](./LICENSE)
