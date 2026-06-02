@@ -1,6 +1,6 @@
 {
   "name": "postcss-filter-plugins",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "Exclude/warn on duplicated PostCSS plugins.",
   "keywords": [
     "css",
@@ -29,7 +29,8 @@
   "scripts": {
     "format": "oxfmt",
     "lint": "oxlint && oxfmt --check",
-    "test": "npm run lint && node --test src/index.test.js"
+    "test": "npm run lint && node --test src/index.test.js",
+    "release": "npx npmpub"
   },
   "devDependencies": {
     "oxfmt": "^0.53.0",

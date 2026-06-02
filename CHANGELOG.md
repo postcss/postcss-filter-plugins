@@ -1,3 +1,8 @@
+# 4.0.0 - 2026-06-02
+
+- Changed: Update to postcss v8, as a peerDep.
+- Internal: simplified code to ease maintenance.
+
 # 3.0.1
 
 - Remove vulnerable downstream dependency
